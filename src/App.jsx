@@ -5,6 +5,7 @@ import HomeView from "@/features/HomeView";
 import CssFrameworks from "@/features/projects/CssFrameworks"
 import SemesterProject2 from '@/features/projects/SemesterProject2';
 import ProjectExam2 from "@/features/projects/ProjectExam2"
+
 function App() {
   
   return (
@@ -15,8 +16,9 @@ function App() {
       <Route index element={<HomeView/>}/>
         <Route path="/projects">
           <Route path="CssFrameworks" element={<CssFrameworks/>}/>
-          <Route path="ProjectExam2" element={<ProjectExam2/>}/>
           <Route path="SemesterProject2" element={<SemesterProject2/>}/>
+          <Route path="ProjectExam2" element={<ProjectExam2/>}/>
+         
         </Route>
       </Route>
       

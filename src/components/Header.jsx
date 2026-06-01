@@ -24,13 +24,26 @@ export default function Header(){
  
  
   return(
-   <nav ref={wrapperRef} className="flex flex-row items-center relative md:flex md:justify-between  h-15 border-b border-border text-primary">
-    <div  className="flex items-center justify-between px-7 w-full text-xs">
-    <Link to={"/"} className="font-parkinsans text-3xl text-primary">
-     Home
+   <nav id="top" ref={wrapperRef} className="flex flex-row items-center relative w-full text-[#cad2c5] md:flex md:justify-between bg-transparent h-15 drop-shadow-2xl drop-shadow-[#354f52]">
+    <div  className="flex items-center justify-between px-7 w-full">
+    <Link to={"/"} className="font-parkinsans text-3xl  pt-3 px-5 h-15 text-center self-center" >
+     Gustav Bøe
     </Link>
-    <div className="hidden md:flex items-center gap-6 ">
-      
+    <div className="hidden md:flex flex-row items-center gap-15 pr-15 lg:pr-25 ">
+    <Link to={"/"}>Home</Link>
+    <a href="https://github.com/GustavBoe" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      >
+      GitHub
+      </a>
+   <a href="https://www.linkedin.com/in/gustav-hugo-bøe-ab16473b3" 
+      target="_blank" 
+      rel="noopener norefferer"
+      >
+      Linkedin
+      </a>
+
 
     </div>
     
@@ -40,14 +53,16 @@ export default function Header(){
   }}>{!isOpen ? <Menu size={28}/> : <X size={28}/> }</button>
    
    {isOpen &&(
-    <div onClick={(e) => e.stopPropagation()} className="md:hidden flex flex-col items-center absolute top-full text-lg left-0 w-full z-50 shadow-lg  bg-white border-t border-b  border-border hover:cursor-pointer">
+    <div onClick={(e) => e.stopPropagation()} className="md:hidden flex flex-col items-center absolute top-full text-lg left-0 w-full z-50 shadow-lg bg-[#354f52] hover:cursor-pointer">
     <div className="flex flex-col items-center text-center w-full">
-      <Link>Hello</Link>
+      <Link to={"/"}>Home</Link>
+     <a href="https://github.com/GustavBoe" target="_blank" 
+      rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/gustav-hugo-bøe-ab16473b3" target="_blank" rel="noopener norefferer">Linkedin</a>
     </div>
     </div>
    )}
    </div>
-   
    </nav>
    
   )
