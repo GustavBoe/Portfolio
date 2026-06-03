@@ -129,7 +129,7 @@ export default function SemesterProject2(){
               <br/>
               This project was built using Typescript and TailwindCSS. 
               Creating Holidaze with typescript was challenging, 
-              and project taught me a lot about both typescript and Tailwind, as well as how I prefer to work as a developer.
+              and the project taught me a lot about both typescript and Tailwind, as well as how I prefer to work as a developer.
 
              </article>
            <div id="links" className="h-30 flex flex-col items-center pt-10">
