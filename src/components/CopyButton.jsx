@@ -7,7 +7,7 @@ export function CopyButton({ text }) {
   return (
     <button
       onClick={copy}
-      className="flex flex-col items-center h-20 mt-6 gap-2"
+      className="flex flex-col items-center h-20 gap-2 text-xs"
       aria-label="Copy link">
       {copied ?
         <>
@@ -15,7 +15,7 @@ export function CopyButton({ text }) {
           Copied!
         </>
       : <>
-          <Clipboard size={64} />
+          <Clipboard size={64} className="hover:cursor-copy" />
           Copy Link
         </>
       }

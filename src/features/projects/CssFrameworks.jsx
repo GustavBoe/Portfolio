@@ -1,4 +1,5 @@
 import githubLogo from "@/assets/GitHub_Invertocat_White_Clearspace.png";
+import figmaLogo from "@/assets/Figma Icon (Mono-line white).png";
 import { CopyButton } from "@/components/CopyButton";
 import { Laptop, ChevronDown } from "lucide-react";
 
@@ -18,7 +19,12 @@ export default function CssFrameworks() {
         <h1 className="font-Tsukimi">Still</h1>
 
         <button onClick={() => scrollToSection("styleguide")}>
-          {<ChevronDown />}
+          {
+            <ChevronDown
+              size={48}
+              className="hover:opacity-70 hover:cursor-pointer"
+            />
+          }
         </button>
       </section>
 
@@ -55,7 +61,12 @@ export default function CssFrameworks() {
             </div>
           </div>
           <button className="pt-10" onClick={() => scrollToSection("preview")}>
-            {<ChevronDown />}
+            {
+              <ChevronDown
+                size={48}
+                className="hover:opacity-70 hover:cursor-pointer"
+              />
+            }
           </button>
         </div>
       </section>
@@ -86,7 +97,12 @@ export default function CssFrameworks() {
           <button
             className="flex flex-col-reverse items-center w-10 pt-10"
             onClick={() => scrollToSection("description")}>
-            {<ChevronDown />}
+            {
+              <ChevronDown
+                size={48}
+                className="hover:opacity-70 hover:cursor-pointer"
+              />
+            }
           </button>
         </div>
       </section>
@@ -108,23 +124,31 @@ export default function CssFrameworks() {
             would have been a better fit for my vision. This project taught me
             that I prefer to style my own components.
           </article>
-          <div id="links" className="h-30 flex flex-col items-center">
-            <div className="grid grid-cols-3 w-[95%] h-fit justify-items-center">
+          <div id="links" className="h-30 flex flex-col items-center pt-10">
+            <div className="grid grid-cols-4 w-[95%] h-fit justify-items-center">
+              {/*https://www.figma.com/design/1233XOUTeaycVHjE6ffsa6/Still-App?node-id=0-1&t=FL7whuXKXF9IQ2Zo-1 */}
               <a
                 href="https://github.com/GustavBoe/JavaScript2Fall25_StillApp/tree/portfolio-improvements"
-                className=" h-20 flex flex-col items-center"
+                className=" h-20 flex flex-col items-center text-xs"
                 target="_blank"
                 rel="noopener norefferer">
-                <img src={githubLogo} alt="GitHub logo" className="h-20 w-20" />
+                <img src={githubLogo} alt="GitHub logo" className="h-15 w-15" />
                 GitHub Repo
               </a>
-
               <a
-                href="https://gustavboe.github.io/JavaScript2Fall25_StillApp/"
-                className="flex flex-col items-center"
+                href="https://www.figma.com/design/1233XOUTeaycVHjE6ffsa6/Still-App?node-id=0-1&t=FL7whuXKXF9IQ2Zo-1"
+                className=" h-20 flex flex-col items-center text-xs"
                 target="_blank"
                 rel="noopener norefferer">
-                {<Laptop size={64} className="h-20" />}
+                <img src={figmaLogo} alt="Figma logo" className="h-15 w-auto" />
+                Figma
+              </a>
+              <a
+                href="https://gustavboe.github.io/JavaScript2Fall25_StillApp/"
+                className="flex flex-col items-center text-xs"
+                target="_blank"
+                rel="noopener norefferer">
+                {<Laptop size={64} className="h-15" />}
                 Live site
               </a>
               <CopyButton text={window.location.href} />

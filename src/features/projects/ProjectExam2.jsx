@@ -18,7 +18,12 @@ export default function SemesterProject2() {
 
         <h1 className="font-parkinsans">Holidaze</h1>
         <button onClick={() => scrollToSection("styleguide")}>
-          {<ChevronDown />}
+          {
+            <ChevronDown
+              size={48}
+              className="hover:opacity-70 hover:cursor-pointer"
+            />
+          }
         </button>
       </section>
       <section
@@ -88,7 +93,12 @@ export default function SemesterProject2() {
             </div>
           </div>
           <button className="pt-10" onClick={() => scrollToSection("preview")}>
-            {<ChevronDown />}
+            {
+              <ChevronDown
+                size={48}
+                className="hover:opacity-70 hover:cursor-pointer"
+              />
+            }
           </button>
         </div>
       </section>
@@ -118,7 +128,12 @@ export default function SemesterProject2() {
           <button
             className="flex flex-col-reverse items-center w-10 pt-10"
             onClick={() => scrollToSection("description")}>
-            {<ChevronDown />}
+            {
+              <ChevronDown
+                size={48}
+                className="hover:opacity-70 hover:cursor-pointer"
+              />
+            }
           </button>
         </div>
       </section>
@@ -160,7 +175,7 @@ export default function SemesterProject2() {
             work as a developer.
           </article>
           <div id="links" className="h-30 flex flex-col items-center pt-10">
-            <div className="grid grid-cols-3 w-[95%] h-fit justify-items-center">
+            <div className="grid grid-cols-4 w-[95%] h-fit justify-items-center">
               <a
                 href="https://github.com/GustavBoe/PE2_GustavBoe_FED2"
                 className=" h-20 flex flex-col items-center text-xs"
